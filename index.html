@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Doubly-Even Code Checker</title>
+  <style>
+    body { font-family: monospace; padding: 2rem; background: #111; color: #eee; }
+    input, button { font-size: 1.2rem; margin-top: 1rem; }
+    .valid { color: #0f0; }
+    .invalid { color: #f66; }
+    .output { margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h2>🔢 Doubly-Even Code Playground</h2>
+  <label for="input">Enter binary string (e.g., 1101):</label><br>
+  <input type="text" id="input" maxlength="32" />
+  <button onclick="check()">Check</button>
+
+  <div class="output" id="result"></div>
+
+  <!-- Link external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
