@@ -6,7 +6,14 @@ function isDoublyEven(str) {
 function addParityBits(bits) {
   const onesCount = bits.split('').filter(b => b === '1').length;
   const needed = (4 - (onesCount % 4)) % 4;
-  return bits + '1'.repeat(needed);
+  return {
+    fixed: bits + '1'.repeat(needed),
+    parityBits: needed
+  };
+}
+
+function bitSpan(bit, cls = "") {
+  return `<span class="bit ${cls}">${bit}</span>`;
 }
 
 function check() {
@@ -18,14 +25,24 @@ function check() {
     return;
   }
 
-  const fixed = addParityBits(input);
+  const { fixed, parityBits } = addParityBits(input);
   const valid = isDoublyEven(fixed);
+
+  const bitDisplay = fixed
+    .split('')
+    .map((bit, i) => {
+      const cls = i < input.length ? 'original' : 'parity';
+      return bitSpan(bit, cls);
+    })
+    .join('');
 
   result.innerHTML = `
     <p>Original: <code>${input}</code></p>
     <p>With parity: <code>${fixed}</code></p>
+    <div class="bit-grid">${bitDisplay}</div>
     <p class="${valid ? 'valid' : 'invalid'}">
       ${valid ? '✅ Doubly-even (valid)' : '❌ Not doubly-even'}
     </p>
+    ${parityBits > 0 ? `<p><small>(${parityBits} parity bit${parityBits > 1 ? 's' : ''} added)</small></p>` : ''}
   `;
 }
