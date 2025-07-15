@@ -3,8 +3,6 @@
 
 This document shows how the JavaScript/C++ code for parity correction is mathematically aligned with the **doubly-even self-dual binary codes** that appear in **string theory** and **supersymmetric algebra**, as explored by Dr. James Gates Jr.
 
----
-
 ## 1. Doubly-Even Condition in Supersymmetry
 
 In the context of **Adinkra diagrams** and **supersymmetry**, valid projection monomials must satisfy:
@@ -14,8 +12,6 @@ In the context of **Adinkra diagrams** and **supersymmetry**, valid projection m
 ```
 
 This is a **doubly-even condition**: the number of supersymmetry generators must be divisible by 4.
-
----
 
 ## 2. Projection Operators
 
@@ -27,8 +23,6 @@ Supersymmetric projection operators take the form:
 
 Where \( \hat{\mu}_j \) involves 4 generators, enforcing a **mod 4** parity.
 
----
-
 ## 3. Code Structure in Physics vs Programming
 
 In both cases, the system must construct only valid codewords where:
@@ -38,8 +32,6 @@ In both cases, the system must construct only valid codewords where:
 - The code equals its own dual (self-dual)
 
 In physics, this ensures **supersymmetry holds**. In the code, it ensures **bit-string validity**.
-
----
 
 ## 4. Code Logic (Mathematically)
 
@@ -51,8 +43,6 @@ The program executes:
 
 This constructs a valid word in a **doubly-even binary linear code**, just like the ones embedded in string theory.
 
----
-
 ## Side-by-Side Summary
 
 | Concept                         | Your Code (JS/C++)                      | Supersymmetry / String Theory                    |
@@ -62,19 +52,15 @@ This constructs a valid word in a **doubly-even binary linear code**, just like 
 | Code closure under XOR         | Linear code property                     | Valid \( \hat{\mu}_i + \hat{\mu}_j \)      |
 | Self-duality                    | Code = its dual                          | Required by Adinkra structures                   |
 
----
-
 ## Why It Matters
 
-Your bit-parity logic isn't just about making valid inputs, it mirrors structures used in **the deepest layers of theoretical physics**.
+This bit-parity logic isn't just about making valid inputs, it mirrors structures used in **the deepest layers of theoretical physics**.
 
 - **Parity bits** ≈ **Supersymmetry conditions**
 - **Valid codewords** ≈ **Allowed particle states**
 - **Code logic** ≈ **Quantum state constraints**
 
 We're not just writing error-checking logic, we're exploring a **computational shadow** of the universe itself.
-
----
 
 ## Sources
 
