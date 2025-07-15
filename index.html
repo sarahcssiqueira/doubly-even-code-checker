@@ -8,7 +8,44 @@
       font-family: 'Courier New', monospace;
       background: #0e0e0e;
       color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+      background: #1c1c1c;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid #333;
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #9beefb;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: background 0.3s, border 0.3s;
+    }
+
+    nav a:hover {
+      background: #2a2a2a;
+    }
+
+    main {
       padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -25,7 +62,8 @@
       border: 1px solid #555;
       padding: 0.5rem 1rem;
       font-size: 1.1rem;
-      width: 300px;
+      width: 100%;
+      max-width: 300px;
       margin-top: 0.5rem;
       border-radius: 4px;
     }
@@ -64,7 +102,6 @@
       padding: 6px;
       border-radius: 4px;
       background: #333;
-      transition: background 0.3s;
     }
 
     .bit.original {
@@ -93,12 +130,20 @@
   </style>
 </head>
 <body>
-  <h2>Doubly-Even Code Playground</h2>
-  <label for="input">Enter binary string:</label>
-  <input type="text" id="input" maxlength="32" placeholder="e.g., 10101" />
-  <button onclick="check()">Check Code</button>
 
-  <div class="output" id="result"></div>
+  <nav>
+    <a href="https://github.com/sarahcssiqueira/doubly-even-code-checker/blob/master/math.md" target="_blank">Check the Math</a>
+  </nav>
+
+  <main>
+    <h2>Doubly-Even Code Playground</h2>
+
+    <label for="input">Enter binary string:</label>
+    <input type="text" id="input" maxlength="32" placeholder="e.g., 10101" />
+    <button onclick="check()">Check Code</button>
+
+    <div class="output" id="result"></div>
+  </main>
 
   <script src="script.js"></script>
 </body>
